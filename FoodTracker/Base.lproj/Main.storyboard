@@ -50,6 +50,9 @@
                             <constraint firstItem="gtU-bH-Fxt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="j24-KQ-AfO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="wOo-Iq-05M" id="oke-Xb-oBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
