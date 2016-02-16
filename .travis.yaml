@@ -1,3 +1,4 @@
 # FoodTracker Test
 language: objective-c
-
+script:
+  - xctool -workspace FoodTracker.xcodeproj/project.xcworkspace -scheme FoodTracker.xcscheme -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
