@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -45,6 +46,12 @@
                                     <constraint firstAttribute="trailing" secondItem="wOo-Iq-05M" secondAttribute="trailing" id="VeM-Zw-ima"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-EZ-EIc">
+                                <rect key="frame" x="20" y="193" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bvv-EZ-EIc" secondAttribute="height" multiplier="1:1" id="IxU-za-YTK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
