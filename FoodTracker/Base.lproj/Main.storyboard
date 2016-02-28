@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-bH-Fxt">
-                                <rect key="frame" x="20" y="80" width="560" height="357"/>
+                                <rect key="frame" x="20" y="80" width="560" height="413"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXr-qO-9Yc">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
@@ -50,6 +50,10 @@
                                             <outletCollection property="gestureRecognizers" destination="qEi-es-1fN" appends="YES" id="2ms-eC-W4o"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="jvO-ae-Fhu" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="369" width="240" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wOo-Iq-05M" firstAttribute="leading" secondItem="gtU-bH-Fxt" secondAttribute="leading" id="AaM-bV-neW"/>
