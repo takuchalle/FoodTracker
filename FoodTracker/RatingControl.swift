@@ -9,6 +9,9 @@
 import UIKit
 
 class RatingControl: UIView {
+    // MARK: Properties
+    var rating = 0
+    var ratingButtons = [UIButton]()
 
     // MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
