@@ -45,15 +45,19 @@ class MealTableViewController: UITableViewController {
         return meals.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "MealTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MealTableViewCell
 
-        // Configure the cell...
+        // Fetches the appropriate meal for the data source layout.
+        let meal = meals[indexPath.row]
+        cell.nameLabel.text = meal.name
+        cell.photoImageView.image = meal.photo
+        cell.ratingControl.rating = meal.rating
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
