@@ -114,7 +114,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Meal" id="A1C-Jv-j0B">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eGg-qx-lmF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eGg-qx-lmF">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="62O-Ai-pVV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ff-2Y-AQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
