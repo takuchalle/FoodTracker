@@ -116,7 +116,7 @@
                     <navigationItem key="navigationItem" title="Your Meal" id="A1C-Jv-j0B">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eGg-qx-lmF">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="62O-Ai-pVV"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddItem" id="62O-Ai-pVV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
