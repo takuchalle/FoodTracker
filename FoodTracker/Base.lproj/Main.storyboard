@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-bH-Fxt">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-bH-Fxt">
                                 <rect key="frame" x="20" y="80" width="560" height="338"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOo-Iq-05M">
@@ -55,6 +55,7 @@
                             <constraint firstItem="gtU-bH-Fxt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="j24-KQ-AfO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lWu-nQ-bvI"/>
                     <connections>
                         <outlet property="nameTextField" destination="wOo-Iq-05M" id="oke-Xb-oBl"/>
                         <outlet property="photoImageView" destination="Bvv-EZ-EIc" id="tS3-WC-aWy"/>
@@ -68,7 +69,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1927" y="492"/>
+            <point key="canvasLocation" x="2739" y="492"/>
         </scene>
         <!--Your Meal-->
         <scene sceneID="SwY-aH-oVy">
@@ -116,7 +117,7 @@
                     <navigationItem key="navigationItem" title="Your Meal" id="A1C-Jv-j0B">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eGg-qx-lmF">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="AddItem" id="62O-Ai-pVV"/>
+                                <segue destination="P3c-VV-0ne" kind="presentation" identifier="AddItem" id="62O-Ai-pVV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -142,6 +143,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3M-Cq-3sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="428" y="492"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="94w-wp-7PT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3c-VV-0ne" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oc1-pr-IrU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FSY-6h-laN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2M0-6X-aO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="492"/>
         </scene>
     </scenes>
     <resources>
