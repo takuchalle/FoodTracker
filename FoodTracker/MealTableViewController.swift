@@ -113,9 +113,14 @@ class MealTableViewController: UITableViewController {
 
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? MealViewController, meal = sourceViewController.meal {
-            let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
-            meals.append(meal)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                meals[selectedIndexPath.row] = meal
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            } else {
+                let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
+                meals.append(meal)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
         }
     }
 }
