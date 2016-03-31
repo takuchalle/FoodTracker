@@ -36,4 +36,12 @@ class Meal: NSObject, NSCoding {
         aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
         aCoder.encodeInteger(rating, forKey: PropertyKey.ratingKey)
     }
+    required convenience init?(coder aDecoder: NSCoder) {
+        let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
+        // Because photo is an optional property of Meal, use conditional cast.
+        let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
+        let rating = aDecoder.decodeIntegerForKey(PropertyKey.ratingKey)
+        // Must call designated initializer.
+        self.init(name: name, photo: photo, rating: rating)
+    }
 }
