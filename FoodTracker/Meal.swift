@@ -30,4 +30,10 @@ class Meal: NSObject, NSCoding {
             return nil
         }
     }
+    // MARK: NSCoding
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
+        aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
+        aCoder.encodeInteger(rating, forKey: PropertyKey.ratingKey)
+    }
 }
